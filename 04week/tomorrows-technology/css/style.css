@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  margin: auto;
+}
+header {
+  background-image: url(./img/bg.jpg);
+  height: 480px;
+  width: 60%;
+}
+.stories {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 40px;
+}
+.bottomText {
+  margin-bottom: 5px;
+}
