@@ -1,15 +1,21 @@
 .container {
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
+  /* grid-template-columns: 1fr 4fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-  ". div .";
+  ". div ."; */
   background-color: blue;
-  grid-gap: 2em;
-  align-items: center;
 }
 div {
-  display: grid;
+  display: subgrid;
+  /* grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 3fr 3fr 1fr;
+  grid-template-areas:
+
+  ". fakeImage ."
+  ". paragraph ."
+  "redDot three redBox"; */
+
   grid-gap: 2em;
   align-items: center;
   align-self: center;
@@ -17,14 +23,41 @@ div {
   margin: auto;
   padding: 20px;
 }
-h1 {
+header {
   display: flex;
-  font-size: 60px;
+  font-size: 90px;
   font-family: arial, sans-serif;
-  background-color: yellow;
   justify-content: center;
+  margin-bottom: 2%;
+  margin-top: 2%;
 }
 .fakeImage {
+  grid-area: fakeImage;
   background-color: purple;
-  
+  margin: auto;
+  width: 80%;
+}
+p {
+  grid-area: paragraph;
+  grid-template-columns: <track-size> 80%;
+}
+.redDot {
+  grid-area: redDot;
+  background-color: red;
+  border: 3px solid black;
+  height: 15px;
+  width: 15px;
+  border-radius: 30px;
+}
+h2 {
+  grid-area: three;
+  font-size: 22px;
+}
+.redBox {
+  grid-area: redBox;
+  width: 50px;
+  height: 15px;
+  background-color: red;
+  border: 2px solid black;
+
 }
