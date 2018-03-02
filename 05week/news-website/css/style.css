@@ -1,42 +1,14 @@
-/* .container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 4 auto;
-
-} */
-.post {
-  /* display: subgrid;
-  height: auto;
-  width: 80%;
-  margin: 5% 10% 15% 10%; */
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-  "fakeImage fakeImage fakeImage"
-  "paragraph paragraph paragraph"
-  "redDot three redBox"
-}
 .post:nth-child(odd) {
   background: #ddd;
 }
 .post:nth-child(even) {
   background: #ccc;
 }
-/* header {
-  display: flex;
-  justify-content: center;
-  font-size: 55px;
-  padding-bottom: 5%;
-} */
-.fakeImage {
+/* .fakeImage {
   height: 300px;
   width: 80%;
   background-color: purple;
-  margin: auto;
-}
-p {
-  width: 80%;
-  transform: translateX(15%);
-  grid-area: paragraph;
+  margin: auto; */
 }
 .redDot {
   border: 3px solid black;
@@ -44,7 +16,6 @@ p {
   height: 15px;
   width: 15px;
   background-color: red;
-  grid-area: redDot;
 }
 h2 {
   font-size: 20px;
@@ -59,33 +30,12 @@ h2 {
   border-radius: 5px;
   grid-area: redBox;
   }
-  redBox, h2, redDot {
-    display: inline;
-  }
 @media(max-width: 576px) {
   .container {
     display: grid;
     grid-template-columns: repeat(1, .5fr 3fr .5fr);
     grid-template-rows: repeat(11, auto);
     grid-gap: 2em;
-
-    /* grid-template-columns: 1fr;
-    grid-template-areas:
-      "post post1"
-      "post post2"
-      "post post3"
-      "post post4"
-      "post post5"
-      "post post6"
-      "post post7"
-      "post post8"
-      "post post9"
-      "post post10"; */
-
-  }
-  .post {
-    grid-column-start: 2;
-    grid-column-end: 3;
   }
   h1{
     grid-column: 2/3;
@@ -93,8 +43,31 @@ h2 {
     text-align: center;
     padding-top: 15px;
   }
-}
 
-/* @media (min-width: 768px) {
-
-} */
+  .post {
+    display: subgrid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    /* grid-template-columns: .5fr 3fr .5fr; */
+    grid-template-columns: .5fr .5fr 2fr 2fr 1fr;
+    grid-template-rows: repeat(7, auto);
+    grid-gap: 1em;
+  }
+      .fakeImage {
+        grid-row: 2/3;
+        grid-column: 3/5;
+      }
+      p {
+        grid-row: 2/3;
+        grid-column: 3/5;
+      }
+      .redDot {
+        grid-row:
+      }
+      h2{
+        grid-row:
+      }
+      .redBox{
+        grid-row:
+      }
+  }
