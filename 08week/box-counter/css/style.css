@@ -1,0 +1,27 @@
+body {
+  font-style:tahoma,verdana;
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  text-align: center;
+  align-items: center;
+}
+#button1{
+  height: 3em;
+  width: 40em;
+  font-size: 1.3rem;
+  background: black;
+  color: white;
+  border: 2px solid darkgray;
+}
+#button1:hover{
+  background: gray;
+  color: black;
+}
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  border: 2px solid black
+
+}
