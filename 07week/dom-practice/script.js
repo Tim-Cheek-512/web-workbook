@@ -40,8 +40,9 @@ addBtn.appendChild(insideText);
 
 document.getElementById('button1').onclick = function(){
   var text = document.getElementById('textBox').value;
-  var li = '<li> + text + </li>';
-  document.getElementById('shopping-list').appendChild(li);
+  var li = text.createElement('li');
+  li.setAttribute('class', 'newItems');
+  document.getElementById('shopping-list').appendChild(getElementById(newItems));
 }
 //    ....End job 3
 
@@ -94,4 +95,3 @@ document.getElementById('button1').onclick = function(){
 //
 //
 //
-// });
