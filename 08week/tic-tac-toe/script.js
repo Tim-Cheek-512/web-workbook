@@ -1,5 +1,5 @@
 'use strict';
-
+// Start of code that will apply Xs and Os when each cell is clicked...
 $(document).ready(function(){
   // Put app logic in here
   var turn = 'X';
@@ -16,6 +16,10 @@ $(document).ready(function(){
         }
       }
   })
+
+  // .....End of X/O application
+
+   // Checking for Wins each way on the board...
 
   function wins() {
     if($('[data-cell="0"]').text() === turn &&
@@ -59,4 +63,24 @@ $(document).ready(function(){
                     alert(`${turn} Wins!`);
                 }
 }
+
+// Checking for tie - dont have to check for a win just check for empty spaces....
+
+
+
+// .....end of cheking for spaces
+
+// .....End of checking for wins
+
+
+// Start of Clearing board button....
+
+
+// ......End of clearing board button
+
+
+// Start of adding Win alert as an h1 message...
+
+
+//...End of adding h1 message
 });
